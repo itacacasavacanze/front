@@ -14,13 +14,13 @@ export const AboutSection: React.FC = () => {
       description: t('luxuryDescription')
     },
     {
-      icon: Award, 
+      icon: Award,
       title: t('primeLocation'),
       description: t('locationDescription')
     },
     {
       icon: Users,
-      title: t('authenticHospitality'), 
+      title: t('authenticHospitality'),
       description: t('hospitalityDescription')
     },
     {
@@ -42,7 +42,7 @@ export const AboutSection: React.FC = () => {
               </h2>
               <div className="w-20 h-1 bg-gradient-sea rounded-full"></div>
             </div>
-            
+
             <p className="text-lg text-muted-foreground leading-relaxed">
               {t('aboutText')}
             </p>
@@ -72,15 +72,15 @@ export const AboutSection: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
             </div>
-            
+
             {/* Floating Stats */}
             <div className="absolute -bottom-8 -left-8 bg-background border border-border rounded-xl p-6 shadow-card">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">2019</div>
-                <div className="text-sm text-muted-foreground">Established</div>
+                <div className="text-2xl font-bold text-primary">2017</div>
+                <div className="text-sm text-muted-foreground">established</div>
               </div>
             </div>
-            
+
             <div className="absolute -top-8 -right-8 bg-background border border-border rounded-xl p-6 shadow-card">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">9.3★</div>

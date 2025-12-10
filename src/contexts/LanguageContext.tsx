@@ -18,27 +18,27 @@ const translations = {
     availability: 'Availability',
     contact: 'Contact',
     about: 'About',
-    
+
     // Hero Section
-    heroTitle: 'Welcome to Apartamento Itaca',
+    heroTitle: 'Welcome to Itaca Casa Vacanze',
     heroSubtitle: 'Experience Mediterranean luxury in the neighbourhood of Marina di Ragusa, Sicily',
-    heroDescription: 'Discover our elegant boutique hotel where timeless Sicilian charm meets modern comfort',
+    heroDescription: 'Discover our elegant apartments',
     bookNow: 'Book Now',
-    exploreRooms: 'Explore Rooms',
+    exploreRooms: 'Explore Apartments',
     guestRating: 'Guest Rating',
-    
+
     // About Section
     aboutTitle: 'Our Story',
     aboutText: 'Apartamento Itaca is a boutique gem nestled in the enchanting Marina di Ragusa, Sicily. Our place combines traditional Sicilian hospitality with contemporary elegance, offering guests an unforgettable Mediterranean experience.',
-    luxuryExperience: 'Luxury Experience',
-    luxuryDescription: 'Boutique elegance with personalized service',
+    luxuryExperience: 'Top Rating Experience',
+    luxuryDescription: 'Personal touch loved by our customers',
     primeLocation: 'Prime Location',
     locationDescription: 'Steps away from pristine Mediterranean beaches',
     authenticHospitality: 'Authentic Hospitality',
     hospitalityDescription: 'Traditional Sicilian warmth and modern comfort',
     memorableMoments: 'Memorable Moments',
-    momentsDescription: 'Creating unforgettable Mediterranean memories',
-    
+    momentsDescription: 'Creating unforgettable memories',
+
     // Rooms
     roomsTitle: 'Our Apartments',
     roomsSubtitle: 'Choose from our two beautiful apartments, each offering comfort and authentic Sicilian hospitality',
@@ -54,7 +54,7 @@ const translations = {
     welcomeAmenities: 'Welcome Amenities',
     freeParking: 'Free Parking',
     photoGallery: 'Photo Gallery',
-    
+
     // Availability
     availabilitySubtitle: 'Check our real-time availability and book your perfect dates',
     available: 'Available',
@@ -62,7 +62,7 @@ const translations = {
     pastDate: 'Past Date',
     readyToBook: 'Ready to Book?',
     readyToBookText: 'Contact us directly to secure your preferred dates and receive personalized assistance',
-    
+
     // Contact
     contactTitle: 'Book Your Stay',
     contactSubtitle: 'Fill out the form below and we\'ll get back to you soon',
@@ -74,11 +74,16 @@ const translations = {
     address: 'Via dell\'Arancio, 20, Marina di Ragusa, Sicilia, Italia',
     phone: '+39 0932 123456',
     email: 'info@hotelitaca.com',
-    
+
     // Footer
     followUs: 'Follow Us',
     privacyPolicy: 'Privacy Policy',
     termsConditions: 'Terms & Conditions',
+    adults: 'Persons',
+    apartmentPreference: 'Apartment Preference',
+    groundFloor: 'Ground Floor',
+    firstFloor: 'First Floor',
+    any: 'Any',
   },
   it: {
     // Navigation
@@ -87,27 +92,27 @@ const translations = {
     availability: 'Disponibilità',
     contact: 'Contatti',
     about: 'Chi Siamo',
-    
+
     // Hero Section
-    heroTitle: 'Benvenuti all\'Apartamento Itaca',
+    heroTitle: 'Benvenuti a Itaca Casa Vacanze',
     heroSubtitle: 'Vivete il lusso mediterraneo nelle vicinanze di Marina di Ragusa, Sicilia',
-    heroDescription: 'Scoprite il nostro elegante boutique hotel dove il fascino siciliano si incontra con il comfort moderno',
+    heroDescription: 'Scoprite i nostri eleganti appartamenti',
     bookNow: 'Prenota Ora',
-    exploreRooms: 'Esplora Camere',
+    exploreRooms: 'Esplora Appartamenti',
     guestRating: 'Valutazione Ospiti',
-    
+
     // About Section
     aboutTitle: 'La Nostra Storia',
-    aboutText: 'Apartamento Itaca è una gemma boutique immersa nell\'incantevole Marina di Ragusa, Sicilia. Il nostro posto combina l\'ospitalità tradizionale siciliana con l\'eleganza contemporanea.',
-    luxuryExperience: 'Esperienza di Lusso',
-    luxuryDescription: 'Eleganza boutique con servizio personalizzato',
+    aboutText: 'Apartamento Itaca è una gemma boutique immersa nell\'incantevole Marina di Ragusa, Sicilia. Il nostro posto combina l\'hospitalità tradizionale siciliana con l\'eleganza contemporanea.',
+    luxuryExperience: 'Esperienza di prima categoria',
+    luxuryDescription: 'Tocco personale amato dai nostri clienti',
     primeLocation: 'Posizione Privilegiata',
     locationDescription: 'A pochi passi dalle spiagge mediterranee incontaminate',
     authenticHospitality: 'Ospitalità Autentica',
     hospitalityDescription: 'Calore siciliano tradizionale e comfort moderno',
     memorableMoments: 'Momenti Memorabili',
-    momentsDescription: 'Creando ricordi mediterranei indimenticabili',
-    
+    momentsDescription: 'Creando ricordi indimenticabili',
+
     // Rooms
     roomsTitle: 'I Nostri Appartamenti',
     roomsSubtitle: 'Scegli tra i nostri due bellissimi appartamenti, ognuno offre comfort e autentica ospitalità siciliana',
@@ -123,7 +128,7 @@ const translations = {
     welcomeAmenities: 'Servizi di Benvenuto',
     freeParking: 'Parcheggio Gratuito',
     photoGallery: 'Galleria Fotografica',
-    
+
     // Availability
     availabilitySubtitle: 'Controlla la nostra disponibilità in tempo reale e prenota le tue date perfette',
     available: 'Disponibile',
@@ -131,7 +136,7 @@ const translations = {
     pastDate: 'Data Passata',
     readyToBook: 'Pronto a Prenotare?',
     readyToBookText: 'Contattaci direttamente per assicurarti le date preferite e ricevere assistenza personalizzata',
-    
+
     // Contact
     contactTitle: 'Prenota il Tuo Soggiorno',
     contactSubtitle: 'Compila il modulo qui sotto e ti ricontatteremo presto',
@@ -143,11 +148,16 @@ const translations = {
     address: 'Via dell\'Arancio, 20, Marina di Ragusa, Sicilia, Italia',
     phone: '+39 0932 123456',
     email: 'info@hotelitaca.com',
-    
+
     // Footer
     followUs: 'Seguici',
     privacyPolicy: 'Privacy Policy',
     termsConditions: 'Termini e Condizioni',
+    adults: 'Persone',
+    apartmentPreference: 'Preferenza Appartamento',
+    groundFloor: 'Piano Terra',
+    firstFloor: 'Primo Piano',
+    any: 'Qualsiasi',
   },
   es: {
     // Navigation
@@ -156,27 +166,27 @@ const translations = {
     availability: 'Disponibilidad',
     contact: 'Contacto',
     about: 'Nosotros',
-    
+
     // Hero Section
-    heroTitle: 'Bienvenidos al Apartamento Itaca',
+    heroTitle: 'Bienvenidos a Itaca Casa Vacanze',
     heroSubtitle: 'Experimenta el lujo mediterráneo en la vecindad de Marina di Ragusa, Sicilia',
-    heroDescription: 'Descubre nuestro elegante hotel boutique donde el encanto siciliano se encuentra con el confort moderno',
+    heroDescription: 'Descubre nuestros elegantes apartamentos',
     bookNow: 'Reservar Ahora',
-    exploreRooms: 'Explorar Habitaciones',
+    exploreRooms: 'Explorar Apartamentos',
     guestRating: 'Calificación de Huéspedes',
-    
+
     // About Section
     aboutTitle: 'Nuestra Historia',
     aboutText: 'Apartamento Itaca es una joya boutique situada en la encantadora Marina di Ragusa, Sicilia. Nuestro lugar combina la hospitalidad tradicional siciliana con la elegancia contemporánea.',
     luxuryExperience: 'Experiencia de Lujo',
-    luxuryDescription: 'Elegancia boutique con servicio personalizado',
+    luxuryDescription: 'Toque personalizado amado por nuestros clientes',
     primeLocation: 'Ubicación Privilegiada',
     locationDescription: 'A pasos de las playas mediterráneas pristinas',
     authenticHospitality: 'Hospitalidad Auténtica',
     hospitalityDescription: 'Calidez siciliana tradicional y comodidad moderna',
     memorableMoments: 'Momentos Memorables',
-    momentsDescription: 'Creando recuerdos mediterráneos inolvidables',
-    
+    momentsDescription: 'Creando recuerdos inolvidables',
+
     // Rooms
     roomsTitle: 'Nuestros Apartamentos',
     roomsSubtitle: 'Elige entre nuestros dos hermosos apartamentos, cada uno ofrece comodidad y auténtica hospitalidad siciliana',
@@ -192,7 +202,7 @@ const translations = {
     welcomeAmenities: 'Servicios de Bienvenida',
     freeParking: 'Estacionamiento Gratuito',
     photoGallery: 'Galería de Fotos',
-    
+
     // Availability
     availabilitySubtitle: 'Consulta nuestra disponibilidad en tiempo real y reserva tus fechas perfectas',
     available: 'Disponible',
@@ -200,7 +210,7 @@ const translations = {
     pastDate: 'Fecha Pasada',
     readyToBook: '¿Listo para Reservar?',
     readyToBookText: 'Contáctanos directamente para asegurar tus fechas preferidas y recibir asistencia personalizada',
-    
+
     // Contact
     contactTitle: 'Reserva tu Estancia',
     contactSubtitle: 'Completa el formulario a continuación y te contactaremos pronto',
@@ -212,16 +222,21 @@ const translations = {
     address: 'Via dell\'Arancio, 20, Marina di Ragusa, Sicilia, Italia',
     phone: '+39 0932 123456',
     email: 'info@hotelitaca.com',
-    
+
     // Footer
     followUs: 'Síguenos',
     privacyPolicy: 'Política de Privacidad',
     termsConditions: 'Términos y Condiciones',
+    adults: 'Personas',
+    apartmentPreference: 'Preferencia de Apartamento',
+    groundFloor: 'Planta Baja',
+    firstFloor: 'Primer Piso',
+    any: 'Cualquiera',
   },
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('it');
 
   const t = (key: string): string => {
     return translations[language][key as keyof typeof translations['en']] || key;

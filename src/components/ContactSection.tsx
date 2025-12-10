@@ -8,6 +8,14 @@ import { Textarea } from './ui/textarea';
 import { useToast } from '../hooks/use-toast';
 import { useContactStore } from '../hooks/useContactStore';
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+
 export const ContactSection: React.FC = () => {
   const { t } = useLanguage();
   const { toast } = useToast();
@@ -17,6 +25,8 @@ export const ContactSection: React.FC = () => {
     email: '',
     checkIn: checkInDate,
     checkOut: checkOutDate,
+    adults: '2',
+    apartmentPref: 'any',
     message: ''
   });
 
@@ -38,20 +48,20 @@ export const ContactSection: React.FC = () => {
 
     emailjs.send('service_t7q6mjf', 'template_e6k9p8q', formData, 'JelChz98UTCzUysU5')
       .then((result) => {
-          console.log(result.text);
-          toast({
-            title: "Booking Request Sent!",
-        description: "We'll get back to you within 24 hours to confirm your reservation.",
-      });
-      setFormData({ name: '', email: '', checkIn: '', checkOut: '', message: '' });
-      setDates('', '');
+        console.log(result.text);
+        toast({
+          title: "Booking Request Sent!",
+          description: "We'll get back to you within 24 hours to confirm your reservation.",
+        });
+        setFormData({ name: '', email: '', checkIn: '', checkOut: '', adults: '2', apartmentPref: 'any', message: '' });
+        setDates('', '');
       }, (error) => {
-          console.log(error.text);
-          toast({
-            title: "Error sending booking request.",
-            description: "Please try again later.",
-            variant: "destructive",
-          });
+        console.log(error.text);
+        toast({
+          title: "Error sending booking request.",
+          description: "Please try again later.",
+          variant: "destructive",
+        });
       });
   };
 
@@ -70,6 +80,14 @@ export const ContactSection: React.FC = () => {
     });
   };
 
+  const handleAdultsChange = (value: string) => {
+    setFormData(prev => ({ ...prev, adults: value }));
+  };
+
+  const handleApartmentPrefChange = (value: string) => {
+    setFormData(prev => ({ ...prev, apartmentPref: value }));
+  };
+
   const contactInfo = [
     {
       icon: Phone,
@@ -79,7 +97,7 @@ export const ContactSection: React.FC = () => {
     },
     {
       icon: Mail,
-      label: '', 
+      label: '',
       value: t('email'),
       href: 'mailto:info@hotelitaca.com'
     },
@@ -182,6 +200,40 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </div>
 
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="adults" className="text-sm font-medium text-foreground">
+                      {t('adults')}
+                    </label>
+                    <Select onValueChange={handleAdultsChange} defaultValue={formData.adults}>
+                      <SelectTrigger className="bg-muted border-border focus:border-primary">
+                        <SelectValue placeholder="Select adults" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="1">1</SelectItem>
+                        <SelectItem value="2">2</SelectItem>
+                        <SelectItem value="3">3</SelectItem>
+                        <SelectItem value="4">4</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="apartmentPref" className="text-sm font-medium text-foreground">
+                      {t('apartmentPreference')}
+                    </label>
+                    <Select onValueChange={handleApartmentPrefChange} defaultValue={formData.apartmentPref}>
+                      <SelectTrigger className="bg-muted border-border focus:border-primary">
+                        <SelectValue placeholder="Select preference" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="any">{t('any')}</SelectItem>
+                        <SelectItem value="ground_floor">{t('groundFloor')}</SelectItem>
+                        <SelectItem value="first_floor">{t('firstFloor')}</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium text-foreground">
                     {t('specialRequests')}
@@ -197,10 +249,10 @@ export const ContactSection: React.FC = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
-                  variant="elegant" 
-                  size="lg" 
+                <Button
+                  type="submit"
+                  variant="elegant"
+                  size="lg"
                   className="w-full"
                 >
                   Amuninni!
@@ -246,7 +298,7 @@ export const ContactSection: React.FC = () => {
                   <span>Monday - Sunday</span>
                   <span className="font-medium">7:00 AM - 11:00 PM</span>
                 </div>
-       
+
               </div>
             </div>
           </div>
