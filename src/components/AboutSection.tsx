@@ -77,7 +77,14 @@ export const AboutSection: React.FC = () => {
             <div className="absolute -bottom-8 -left-8 bg-background border border-border rounded-xl p-6 shadow-card">
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">2017</div>
-                <div className="text-sm text-muted-foreground">established</div>
+                <div className="text-sm text-muted-foreground">{t('established')}</div>
+              </div>
+            </div>
+
+            <div className="absolute -bottom-8 -right-8 bg-background border border-border rounded-xl p-6 shadow-card">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">2023</div>
+                <div className="text-sm text-muted-foreground">{t('renovated')}</div>
               </div>
             </div>
 

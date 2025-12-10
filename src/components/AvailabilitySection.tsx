@@ -78,11 +78,11 @@ export const AvailabilitySection: React.FC = () => {
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
-              
+
               <h3 className="text-2xl font-heading font-semibold">
                 {monthNames[currentMonth.getMonth()]} {currentMonth.getFullYear()}
               </h3>
-              
+
               <Button
                 variant="ghost"
                 size="icon"
@@ -115,32 +115,30 @@ export const AvailabilitySection: React.FC = () => {
 
                 // NOTE: Availability is assumed true for now. 
                 // In a real app, this would be fetched from a booking system.
-                const isAvailable = true; 
+                const isAvailable = true;
 
                 return (
                   <div
                     key={index}
-                    className={`h-20 border-r border-b border-border last:border-r-0 p-2 relative cursor-pointer transition-all duration-200 ${
-                      isPast
+                    className={`h-20 border-r border-b border-border last:border-r-0 p-2 relative cursor-pointer transition-all duration-200 ${isPast
                         ? 'bg-muted/50 cursor-not-allowed'
                         : isAvailable
-                        ? 'hover:bg-cream bg-background'
-                        : 'bg-destructive/10 cursor-not-allowed'
-                    }`}
+                          ? 'hover:bg-cream bg-background'
+                          : 'bg-destructive/10 cursor-not-allowed'
+                      }`}
                   >
                     <div className="h-full flex flex-col justify-between">
-                      <div className={`text-sm font-medium ${
-                        isToday
+                      <div className={`text-sm font-medium ${isToday
                           ? 'text-primary font-bold'
                           : isPast
-                          ? 'text-muted-foreground/50'
-                          : isAvailable
-                          ? 'text-foreground'
-                          : 'text-destructive'
-                      }`}>
+                            ? 'text-muted-foreground/50'
+                            : isAvailable
+                              ? 'text-foreground'
+                              : 'text-destructive'
+                        }`}>
                         {day.getDate()}
                       </div>
-                      
+
                       {!isPast && (
                         <div className="text-xs">
                           {isAvailable ? (
@@ -155,7 +153,7 @@ export const AvailabilitySection: React.FC = () => {
                         </div>
                       )}
                     </div>
-                    
+
                     {isToday && (
                       <div className="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></div>
                     )}
@@ -197,7 +195,7 @@ export const AvailabilitySection: React.FC = () => {
                   {t('bookNow')}
                 </Button>
                 <Button variant="outline" size="lg">
-                  Call Us: +39 0932 123456
+                  Call Us: + 39 3397056128 +34 644925499
                 </Button>
               </div>
             </div>

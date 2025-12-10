@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wifi, Car, Coffee, Wind, Waves, Users } from 'lucide-react';
+import { Wifi, Car, Coffee, AirVent, Waves, Users, Zap } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
 import { GalleryPreview } from './GalleryPreview';
@@ -15,18 +15,18 @@ export const RoomsSection: React.FC = () => {
   const apartments = [
     {
       name: 'Apartment Marina',
-      price: '€120',
+      price: '',
       image: mainGroundFloor,
-      amenities: [Wifi, Coffee, Wind, Car],
-      features: ['50 sqm', 'Sea View', 'King Bed', 'Kitchen', 'Balcony'],
+      amenities: [Wifi, Coffee, AirVent, Car, Zap],
+      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('terrace'), t('balcony'), t('kitchen')],
       description: t('seaViewDescription')
     },
     {
       name: 'Apartment Sicilia',
-      price: '€140',
+      price: '',
       image: mainFirstFloor,
-      amenities: [Wifi, Coffee, Waves, Users],
-      features: ['60 sqm', 'Garden View', '2 Bedrooms', 'Living Area', 'Terrace'],
+      amenities: [Wifi, Coffee, AirVent, Car, Zap],
+      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('terrace'), t('balcony'), t('kitchen')],
       description: t('familyDescription')
     }
   ];
@@ -56,9 +56,6 @@ export const RoomsSection: React.FC = () => {
                   alt={apartment.name}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-semibold text-primary">
-                  {apartment.price}<span className="text-xs text-muted-foreground">/night</span>
-                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
@@ -96,13 +93,13 @@ export const RoomsSection: React.FC = () => {
                 </div>
 
                 {/* Book Button */}
-                <Button 
-                  variant="elegant" 
-                  className="w-full group-hover:shadow-soft" 
+                <Button
+                  variant="elegant"
+                  className="w-full group-hover:shadow-soft"
                   size="lg"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  {t('bookNow')} - {apartment.price}
+                  {t('bookNow')}  {apartment.price}
                 </Button>
               </div>
             </div>
@@ -110,9 +107,9 @@ export const RoomsSection: React.FC = () => {
         </div>
 
         {/* Image Gallery Modal */}
-        <ImageGallery 
-          isOpen={isGalleryOpen} 
-          onClose={() => setIsGalleryOpen(false)} 
+        <ImageGallery
+          isOpen={isGalleryOpen}
+          onClose={() => setIsGalleryOpen(false)}
         />
 
         {/* Additional Info */}
@@ -127,7 +124,7 @@ export const RoomsSection: React.FC = () => {
                 <span>{t('freeWifi')}</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Wind className="h-4 w-4" />
+                <AirVent className="h-4 w-4" />
                 <span>{t('airConditioning')}</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
@@ -137,6 +134,10 @@ export const RoomsSection: React.FC = () => {
               <div className="flex items-center justify-center space-x-2">
                 <Car className="h-4 w-4" />
                 <span>{t('freeParking')}</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2">
+                <Zap className="h-4 w-4" />
+                <span>{t('EVcharge')}</span>
               </div>
             </div>
           </div>

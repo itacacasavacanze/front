@@ -45,7 +45,7 @@ const translations = {
     deluxeRoom: 'Deluxe Room',
     seaView: 'Sea View Suite',
     familySuite: 'Family Suite',
-    fromPrice: 'From €120/night',
+    fromPrice: ' ',
     seaViewDescription: 'Spacious apartment with stunning sea views and modern amenities',
     familyDescription: 'Family-friendly apartment perfect for longer stays',
     allRoomsInclude: 'All Rooms Include',
@@ -54,6 +54,7 @@ const translations = {
     welcomeAmenities: 'Welcome Amenities',
     freeParking: 'Free Parking',
     photoGallery: 'Photo Gallery',
+    EVcharge: 'Free charging stations for EVs',
 
     // Availability
     availabilitySubtitle: 'Check our real-time availability and book your perfect dates',
@@ -84,6 +85,15 @@ const translations = {
     groundFloor: 'Ground Floor',
     firstFloor: 'First Floor',
     any: 'Any',
+    established: 'Established',
+    renovated: 'Renovated',
+    sqm75: '75 sqm',
+    gardenView: 'Garden View',
+    twoBedrooms: '2 Bedrooms',
+    livingArea: 'Living Area',
+    terrace: 'Terrace',
+    balcony: 'Balcony',
+    kitchen: 'Kitchen',
   },
   it: {
     // Navigation
@@ -128,6 +138,7 @@ const translations = {
     welcomeAmenities: 'Servizi di Benvenuto',
     freeParking: 'Parcheggio Gratuito',
     photoGallery: 'Galleria Fotografica',
+    EVcharge: 'Stazioni di carica gratuita',
 
     // Availability
     availabilitySubtitle: 'Controlla la nostra disponibilità in tempo reale e prenota le tue date perfette',
@@ -158,6 +169,15 @@ const translations = {
     groundFloor: 'Piano Terra',
     firstFloor: 'Primo Piano',
     any: 'Qualsiasi',
+    established: 'Fondata',
+    renovated: 'Ristrutturata',
+    sqm75: '75 mq',
+    gardenView: 'Vista Giardino',
+    twoBedrooms: '2 Camere da Letto',
+    livingArea: 'Zona Giorno',
+    terrace: 'Terrazza',
+    balcony: 'Balcone',
+    kitchen: 'Cucina',
   },
   es: {
     // Navigation
@@ -202,6 +222,7 @@ const translations = {
     welcomeAmenities: 'Servicios de Bienvenida',
     freeParking: 'Estacionamiento Gratuito',
     photoGallery: 'Galería de Fotos',
+    EVcharge: 'Estación de carga gratuita',
 
     // Availability
     availabilitySubtitle: 'Consulta nuestra disponibilidad en tiempo real y reserva tus fechas perfectas',
@@ -232,6 +253,15 @@ const translations = {
     groundFloor: 'Planta Baja',
     firstFloor: 'Primer Piso',
     any: 'Cualquiera',
+    established: 'Fundada',
+    renovated: 'Renovada',
+    sqm75: '75 m²',
+    gardenView: 'Vista al Jardín',
+    twoBedrooms: '2 Dormitorios',
+    livingArea: 'Sala de Estar',
+    terrace: 'Terraza',
+    balcony: 'Balcón',
+    kitchen: 'Cocina',
   },
 };
 
