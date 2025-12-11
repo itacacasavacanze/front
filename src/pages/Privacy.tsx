@@ -12,6 +12,12 @@ const Privacy = () => {
                 <div className="prose prose-lg dark:prose-invert max-w-none">
                     <ReactMarkdown>{privacyContent}</ReactMarkdown>
                 </div>
+
+                <div className="bg-muted p-4 rounded-lg mt-8 max-w-4xl mx-auto">
+                    <p className="text-sm text-muted-foreground">
+                        <strong>Note to Admin:</strong> You can update this content by editing <code>src/content/privacy.md</code>.
+                    </p>
+                </div>
             </main>
             <Footer />
         </div>
