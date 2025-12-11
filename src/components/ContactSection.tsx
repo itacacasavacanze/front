@@ -46,7 +46,22 @@ export const ContactSection: React.FC = () => {
       return;
     }
 
-    emailjs.send('service_t7q6mjf', 'template_e6k9p8q', formData, 'JelChz98UTCzUysU5')
+    // Map apartment preference to readable text
+    const getReadableApartmentPref = (pref: string) => {
+      switch (pref) {
+        case 'ground_floor': return t('groundFloor');
+        case 'first_floor': return t('firstFloor');
+        default: return t('any');
+      }
+    };
+
+    const templateParams = {
+      ...formData,
+      apartmentPref: getReadableApartmentPref(formData.apartmentPref)
+    };
+
+    // TODO: Replace with your new EmailJS credentials
+    emailjs.send('service_k1lju2b', 'template_506kw3b', templateParams, 'fmsUn6FxYb2Jp3iWU')
       .then((result) => {
         console.log(result.text);
         toast({
@@ -205,7 +220,7 @@ export const ContactSection: React.FC = () => {
                     <label htmlFor="adults" className="text-sm font-medium text-foreground">
                       {t('adults')}
                     </label>
-                    <Select onValueChange={handleAdultsChange} defaultValue={formData.adults}>
+                    <Select onValueChange={handleAdultsChange} value={formData.adults}>
                       <SelectTrigger className="bg-muted border-border focus:border-primary">
                         <SelectValue placeholder="Select adults" />
                       </SelectTrigger>
@@ -221,7 +236,7 @@ export const ContactSection: React.FC = () => {
                     <label htmlFor="apartmentPref" className="text-sm font-medium text-foreground">
                       {t('apartmentPreference')}
                     </label>
-                    <Select onValueChange={handleApartmentPrefChange} defaultValue={formData.apartmentPref}>
+                    <Select onValueChange={handleApartmentPrefChange} value={formData.apartmentPref}>
                       <SelectTrigger className="bg-muted border-border focus:border-primary">
                         <SelectValue placeholder="Select preference" />
                       </SelectTrigger>
