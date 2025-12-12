@@ -7,6 +7,7 @@ import { componentTagger } from "lovable-tagger";
 export default defineConfig(({ mode }) => ({
   base: mode === 'production' ? '/' : '/',
   server: {
+    base: mode === 'production' ? '/' : '/',
     host: "::",
     port: 8080,
     proxy: {
@@ -15,6 +16,10 @@ export default defineConfig(({ mode }) => ({
         changeOrigin: true,
       },
     }
+  },
+  build: {
+    outDir: '../docs',
+    emptyOutDir: true,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
