@@ -26,12 +26,6 @@ const Terms = () => {
                         {termsContent}
                     </ReactMarkdown>
                 </div>
-
-                <div className="bg-muted/50 border border-border p-6 rounded-xl mt-12 max-w-4xl mx-auto text-center">
-                    <p className="text-sm text-muted-foreground">
-                        <strong>Note to Admin:</strong> You can update this content by editing <code>src/content/terms.md</code>.
-                    </p>
-                </div>
             </main>
             <Footer />
         </div>
