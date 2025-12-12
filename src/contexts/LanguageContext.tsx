@@ -74,7 +74,7 @@ const translations = {
     checkOutDate: 'Check-out Date',
     specialRequests: 'Special Requests',
     address: 'Via dell\'Arancio 20. Corso Oceano Atlantico 28, Marina di Ragusa, Sicilia (2 Independent Entrances)',
-    phone: '+39 3397056128    +34 644925499',
+    phone: '+39 3397056198    +34 644925499',
     email: 'info@itacasavacanze.com',
 
     // Footer
@@ -162,7 +162,7 @@ const translations = {
     checkOutDate: 'Data di Check-out',
     specialRequests: 'Richieste Speciali',
     address: 'Via dell\'Arancio 20. Corso Oceano Atlantico 28, Marina di Ragusa, Sicilia (2 Ingressi Indipendenti)',
-    phone: '+39 3397056128    +34 644925499',
+    phone: '+39 3397056198    +34 644925499',
     email: 'info@itacasavacanze.com',
 
     // Footer
@@ -250,7 +250,7 @@ const translations = {
     checkOutDate: 'Fecha de Check-out',
     specialRequests: 'Solicitudes Especiales',
     address: 'Via dell\'Arancio 20. Corso Oceano Atlantico 28, Marina di Ragusa, Sicilia (2 Entradas Independientes)',
-    phone: '+39 3397056128    +34 644925499',
+    phone: '+39 3397056198    +34 644925499',
     email: 'info@itacasavacanze.com',
 
     // Footer

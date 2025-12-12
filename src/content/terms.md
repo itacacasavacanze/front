@@ -4,7 +4,7 @@
 Via dell'Arancio 20 / Corso Oceano Atlantico 28  
 97010 Marina di Ragusa (RG) - Sicilia, Italia  
 Email: info@itacasavacanze.com  
-Telefono: +39 339 705 6128  
+Telefono: +39 339 705 6198  
 Sito web: https://itacasavacanze.com
 
 ---
@@ -32,7 +32,7 @@ L’Ospite dichiara di agire anche in nome e per conto di tutti i soggetti che s
 La prenotazione può avvenire tramite:
 - Modulo di richiesta o sistema di prenotazione sul sito https://itacasavacanze.com  
 - Email all’indirizzo info@itacasavacanze.com  
-- Telefono al numero +39 339 705 6128  
+- Telefono al numero +39 339 705 6198  
 - Piattaforme di prenotazione online (es. Airbnb, Booking.com, ecc.)
 
 ### Conferma della prenotazione
@@ -296,5 +296,5 @@ Via dell'Arancio 20 / Corso Oceano Atlantico 28
 97010 Marina di Ragusa (RG) - Sicilia, Italia  
 
 Email: info@itacasavacanze.com  
-Telefono: +39 339 705 6128  
+Telefono: +39 339 705 6198  
 Sito web: https://itacasavacanze.com
