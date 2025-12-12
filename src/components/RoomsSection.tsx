@@ -14,19 +14,19 @@ export const RoomsSection: React.FC = () => {
 
   const apartments = [
     {
-      name: 'Apartment Marina',
+      name: t('groundFloorApartment'),
       price: '',
       image: mainGroundFloor,
       amenities: [Wifi, Coffee, AirVent, Car, Zap],
-      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('terrace'), t('balcony'), t('kitchen')],
+      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('fourPeople'), t('terrace'), t('balcony'), t('kitchen')],
       description: t('seaViewDescription')
     },
     {
-      name: 'Apartment Sicilia',
+      name: t('firstFloorApartment'),
       price: '',
       image: mainFirstFloor,
       amenities: [Wifi, Coffee, AirVent, Car, Zap],
-      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('terrace'), t('balcony'), t('kitchen')],
+      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('fourPeople'), t('terrace'), t('balcony'), t('kitchen')],
       description: t('familyDescription')
     }
   ];
