@@ -6,16 +6,13 @@ import { initializeFaro, createReactRouterV6DataOptions, ReactIntegration, getWe
 import { TracingInstrumentation } from '@grafana/faro-web-tracing';
 
 initializeFaro({
-  url: 'https://faro-collector-prod-us-central-0.grafana.net/collect/7701faf7c51a9ca126ef2baea047b02f',
+  url: 'https://faro-collector-prod-eu-west-2.grafana.net/collect/42c60372b14ffe69335e57b0e564405a',
   app: {
-    name: 'Apartment Itaca',
+    name: 'Itaca Casa Vacanze ',
     version: '1.0.0',
     environment: 'production'
   },
-  sessionTracking: {
-    samplingRate: 1,
-    persistent: true
-  },
+
   instrumentations: [
     // Mandatory, omits default instrumentations otherwise.
     ...getWebInstrumentations(),
@@ -25,9 +22,7 @@ initializeFaro({
 
     // React integration for React applications.
     new ReactIntegration({
-      router: createReactRouterV6DataOptions({
-        matchRoutes,
-      }),
+      // Router instrumentation is handled in App.tsx via withFaroRouterInstrumentation
     }),
   ],
 });
