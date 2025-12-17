@@ -5,52 +5,27 @@ import { Button } from './ui/button';
 const mainGroundFloor = 'https://imgur.com/opiXPmr.jpg';
 
 
-const galleryImages = [
-  'https://imgur.com/j43myp5.jpg',
-  'https://imgur.com/pbNFOVL.jpg',
-  'https://imgur.com/KVlTfuf.jpg',
-  'https://imgur.com/tJjHo1F.jpg',
-  'https://imgur.com/u3ycmKv.jpg',
-  'https://imgur.com/opiXPmr.jpg',
-  'https://imgur.com/YJPTRYI.jpg',
-  'https://imgur.com/U7SrgfT.jpg',
-  'https://imgur.com/AVkJUch.jpg',
-  'https://imgur.com/BbkZ08Z.jpg',
-  'https://imgur.com/ev4Oifn.jpg',
-  'https://imgur.com/oqHA3qU.jpg',
-  'https://imgur.com/t55SYeT.jpg',
-  'https://imgur.com/5xHHwc5.jpg',
-  'https://imgur.com/OOpjz8O.jpg',
-  'https://imgur.com/yIfgVld.jpg',
-  'https://imgur.com/3ecArCr.jpg',
-  'https://imgur.com/I7KZFsA.jpg',
-  'https://imgur.com/GD1J1df.jpg',
-  'https://imgur.com/FlnSbd1.jpg',
-  'https://imgur.com/Zd7HPiU.jpg',
-  'https://imgur.com/FJpGtVE.jpg',
-  'https://imgur.com/fRVANGK.jpg',
-  'https://imgur.com/C7cRU9z.jpg'
-];
-
 interface ImageGalleryProps {
   isOpen: boolean;
   onClose: () => void;
   initialImageIndex?: number;
+  images: string[];
 }
 
-export const ImageGallery: React.FC<ImageGalleryProps> = ({ 
-  isOpen, 
-  onClose, 
-  initialImageIndex = 0 
+export const ImageGallery: React.FC<ImageGalleryProps> = ({
+  isOpen,
+  onClose,
+  initialImageIndex = 0,
+  images
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(initialImageIndex);
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % galleryImages.length);
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   const goToImage = (index: number) => {
@@ -80,7 +55,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {/* Main Image */}
           <div className="flex items-center justify-center min-h-[60vh] p-4">
             <img
-              src={galleryImages[currentImageIndex]}
+              src={images[currentImageIndex]}
               alt={`Gallery image ${currentImageIndex + 1}`}
               className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-elegant"
             />
@@ -108,15 +83,14 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           {/* Thumbnail Strip */}
           <div className="absolute bottom-0 left-0 right-0 bg-background/90 backdrop-blur-md border-t border-border">
             <div className="flex overflow-x-auto p-4 space-x-2 scrollbar-hide">
-              {galleryImages.map((image, index) => (
+              {images.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => goToImage(index)}
-                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                    index === currentImageIndex
-                      ? 'border-primary ring-2 ring-primary/20'
-                      : 'border-border hover:border-primary/50'
-                  }`}
+                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all duration-300 ${index === currentImageIndex
+                    ? 'border-primary ring-2 ring-primary/20'
+                    : 'border-border hover:border-primary/50'
+                    }`}
                 >
                   <img
                     src={image}
@@ -130,7 +104,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 
           {/* Image Counter */}
           <div className="absolute top-4 left-4 bg-background/10 backdrop-blur-md rounded-full px-3 py-1 text-sm text-foreground">
-            {currentImageIndex + 1} / {galleryImages.length}
+            {currentImageIndex + 1} / {images.length}
           </div>
         </div>
       </DialogContent>

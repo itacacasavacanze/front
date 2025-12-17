@@ -5,28 +5,33 @@ import { Button } from './ui/button';
 import { GalleryPreview } from './GalleryPreview';
 import { ImageGallery } from './ImageGallery';
 import roomImage from '../assets/room-deluxe.jpg';
+import { PIANO_TERRA_IMAGES, PRIMO_PIANO_IMAGES } from '../constants/images';
+
 const mainGroundFloor = 'https://imgur.com/opiXPmr.jpg';
 const mainFirstFloor = 'https://imgur.com/OOpjz8O.jpg';
 
 export const RoomsSection: React.FC = () => {
   const { t } = useLanguage();
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  // State to track which images to show in the gallery (null means closed)
+  const [activeGalleryImages, setActiveGalleryImages] = useState<string[] | null>(null);
 
   const apartments = [
     {
-      name: 'Apartment Marina',
+      name: t('groundFloorApartment'),
       price: '',
       image: mainGroundFloor,
+      images: PIANO_TERRA_IMAGES, // Specific images for this apartment
       amenities: [Wifi, Coffee, AirVent, Car, Zap],
-      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('terrace'), t('balcony'), t('kitchen')],
+      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('fourPeople'), t('terrace'), t('balcony'), t('kitchen')],
       description: t('seaViewDescription')
     },
     {
-      name: 'Apartment Sicilia',
+      name: t('firstFloorApartment'),
       price: '',
       image: mainFirstFloor,
+      images: PRIMO_PIANO_IMAGES, // Specific images for this apartment
       amenities: [Wifi, Coffee, AirVent, Car, Zap],
-      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('terrace'), t('balcony'), t('kitchen')],
+      features: [t('sqm75'), t('gardenView'), t('twoBedrooms'), t('livingArea'), t('fourPeople'), t('terrace'), t('balcony'), t('kitchen')],
       description: t('familyDescription')
     }
   ];
@@ -89,7 +94,10 @@ export const RoomsSection: React.FC = () => {
                 {/* Gallery Preview */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-medium text-foreground">{t('photoGallery')}</h4>
-                  <GalleryPreview onOpenGallery={() => setIsGalleryOpen(true)} />
+                  <GalleryPreview
+                    images={apartment.images}
+                    onOpenGallery={() => setActiveGalleryImages(apartment.images)}
+                  />
                 </div>
 
                 {/* Book Button */}
@@ -108,8 +116,9 @@ export const RoomsSection: React.FC = () => {
 
         {/* Image Gallery Modal */}
         <ImageGallery
-          isOpen={isGalleryOpen}
-          onClose={() => setIsGalleryOpen(false)}
+          isOpen={!!activeGalleryImages}
+          onClose={() => setActiveGalleryImages(null)}
+          images={activeGalleryImages || []}
         />
 
         {/* Additional Info */}

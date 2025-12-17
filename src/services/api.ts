@@ -1,4 +1,8 @@
-const API_URL = import.meta.env.VITE_API_URL || '/api';
+// In production (GitHub Pages), we must point to the full EC2 backend URL
+// In development (localhost), we use the relative path /api which is proxied by Vite to localhost:3001
+const API_URL = import.meta.env.PROD
+    ? 'https://api.itacasavacanze.com/api'
+    : (import.meta.env.VITE_API_URL || '/api');
 
 export const api = {
     login: async (credentials: any) => {

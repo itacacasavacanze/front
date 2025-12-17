@@ -90,8 +90,8 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <Phone className="h-4 w-4 text-primary-foreground/70" />
               <div className="flex flex-col space-y-2">
-                <a href="https://wa.me/393397056128" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 flex items-center space-x-2">
-                  <span>+39 339 705 6128</span>
+                <a href="https://wa.me/393397056198" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 flex items-center space-x-2">
+                  <span>+39 339 705 6198</span>
                   <span className="text-xs opacity-70">(WhatsApp & Phone)</span>
                 </a>
                 <a href="tel:+34644925499" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">

@@ -1,35 +1,33 @@
+
 import React from 'react';
 import { Camera, ImageIcon } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
 const mainGroundFloor = 'https://imgur.com/opiXPmr.jpg';
 
-const previewImages = [
-    'https://imgur.com/j43myp5.jpg',
-    'https://imgur.com/pbNFOVL.jpg',
-    'https://imgur.com/KVlTfuf.jpg',
-    'https://imgur.com/tJjHo1F.jpg',
-  ];
-
 interface GalleryPreviewProps {
   onOpenGallery: () => void;
+  images: string[];
 }
 
-export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onOpenGallery }) => {
+export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onOpenGallery, images }) => {
   const { t } = useLanguage();
-  
+
+  // Take first 4 images for the preview grid
+  const previewImages = images.slice(0, 4);
+
   return (
     <div className="relative group cursor-pointer" onClick={onOpenGallery}>
       {/* Main Preview Grid */}
       <div className="grid grid-cols-2 gap-2 h-64 rounded-lg overflow-hidden">
         {previewImages.map((image, index) => (
-          <div 
+          <div
             key={index}
             className="relative overflow-hidden bg-muted"
           >
             <img
               src={image}
-              alt={`Preview ${index + 1}`}
+              alt={`Preview ${index + 1} `}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
             {index === 3 && (
@@ -46,10 +44,10 @@ export const GalleryPreview: React.FC<GalleryPreviewProps> = ({ onOpenGallery })
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-          <Button variant="hero" size="lg">
-            <Camera className="mr-2 h-5 w-5" />
-            {t('photoGallery')}
-          </Button>
+        <Button variant="hero" size="lg">
+          <Camera className="mr-2 h-5 w-5" />
+          {t('photoGallery')}
+        </Button>
       </div>
     </div>
   );

@@ -188,13 +188,13 @@ export const AvailabilityCalendar: React.FC = () => {
                   {t('bookNow')}
                 </Button>
                 <Button variant="outline" size="lg" className="h-auto py-4 flex flex-col gap-2 sm:flex-row sm:gap-4" asChild>
-                  <a href="https://wa.me/393397056128" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/393397056198" target="_blank" rel="noopener noreferrer">
                     <div className="flex items-center gap-2">
                       <Phone className="h-4 w-4" />
                       <MessageCircle className="h-4 w-4" />
                     </div>
                     <div className="flex flex-col text-xs sm:text-sm font-medium">
-                      <span>+39 339 705 6128</span>
+                      <span>+39 339 705 6198</span>
                       <span className="text-muted-foreground text-[10px] sm:text-xs font-normal">(WhatsApp)</span>
                       <span className="mt-1 border-t border-border pt-1">+34 644 925 499</span>
                     </div>

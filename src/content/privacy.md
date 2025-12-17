@@ -8,7 +8,7 @@ Via dell'Arancio 20 / Corso Oceano Atlantico 28
 
 **Contatti:**  
 Email: info@itacasavacanze.com  
-Telefono: +39 339 705 6128  
+Telefono: +39 339 705 6198  
 Sito web: https://itacasavacanze.com
 
 ---
@@ -185,7 +185,7 @@ Via dell'Arancio 20 / Corso Oceano Atlantico 28
 97010 Marina di Ragusa (RG) - Sicilia, Italia  
 
 Email: info@itacasavacanze.com  
-Telefono: +39 339 705 6128  
+Telefono: +39 339 705 6198  
 
 **Responsabile della Protezione dei Dati (DPO):**  
 Daniele Belfiore  
